@@ -23,7 +23,7 @@ I have made this token authentication generator that can be used with cdnsun.com
 
 <b>optional allow only the following domains</b>
 
-<code>$encryption->allow = array( 'domain1.com', 'domain2.com', 'etc...');</code>
+<code>$encryption->allow = array( 'domain1.com', 'domain2.com', 'etc.com');</code>
 
 <b>optional deny following domain, blank or missing referrer</b>
 
