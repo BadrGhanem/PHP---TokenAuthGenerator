@@ -7,7 +7,7 @@ I have made this token authentication generator that can be used with cdnsun.com
 <b>HOW TO USE</b>:
 
 
-
+<code>
 require_once 'TokenAuthGenerator.php';
 
 
@@ -28,6 +28,7 @@ $token = $encryption->token(); // Generate a token
 
 
 echo $token; // show it
+</code>
 
 
 
