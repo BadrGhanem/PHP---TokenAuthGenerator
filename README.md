@@ -7,32 +7,35 @@ I have made this token authentication generator that can be used with cdnsun.com
 <b>HOW TO USE</b>:
 
 
-<code> require_once 'TokenAuthGenerator.php'; </code>
+<code>require_once 'TokenAuthGenerator.php'; </code>
 
 
-
-<code> $encryption = new Ghanem;</code>
-
+<code>$encryption = new Ghanem;</code>
 
 
-<code> $encryption->set_key("S9JjYqYzE9gFIZkD"); // Put your key here</code>
+<b>Put your key here</b>
 
+<code> $encryption->set_key("S9JjYqYzE9gFIZkD");</code>
 
+<b>optional add token expiration time +60 means token expire in 60 seconds</b>
 
-<code> $encryption->expire = strtotime(date('d-m-Y H:i:s')) + 60;  // optional add token expiration time +60 means token expire in 60 seconds</code>
+<code>$encryption->expire = strtotime(date('d-m-Y H:i:s')) + 60;</code>
 
+<b>optional allow only the following domains</b>
 
-<code> $encryption->allow = array( 'domain1.com', 'domain2.com', 'etc...'); // optional allow only the following domains</code>
+<code>$encryption->allow = array( 'domain1.com', 'domain2.com', 'etc...');</code>
 
+<b>optional deny following domain, blank or missing referrer</b>
 
-<code> $encryption->deny = array( 'domain.com', 'MISSING' ); // optional deny following domain, blank or missing referrer</code>
+<code>$encryption->deny = array( 'domain.com', 'MISSING' );</code>
 
+<b>Generate a token</b>
 
-<code> $token = $encryption->token(); // Generate a token</code>
+<code>$token = $encryption->token();</code>
 
+<b>show it</b>
 
-
-<code> echo $token; // show it</code>
+<code>echo $token;</code>
 
 
 
@@ -45,9 +48,9 @@ I have made this token authentication generator that can be used with cdnsun.com
 
 
 
-// You can also decrypt the token
+<b>You can also decrypt the token</b>
 
-echo $encryption->decrypt($token);
+<code>echo $encryption->decrypt($token);</code>
 
 
 
