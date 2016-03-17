@@ -7,28 +7,34 @@ I have made this token authentication generator that can be used with cdnsun.com
 <b>HOW TO USE</b>:
 
 
-<code>
-require_once 'TokenAuthGenerator.php';
+<code> require_once 'TokenAuthGenerator.php'; </code>
 
 
-$encryption = new Ghanem;
+
+<code> $encryption = new Ghanem;</code>
 
 
-$encryption->set_key("S9JjYqYzE9gFIZkD"); // Put your key here
+
+<code> $encryption->set_key("S9JjYqYzE9gFIZkD"); // Put your key here</code>
 
 
-$encryption->expire = strtotime(date('d-m-Y H:i:s')) + 60;  // optional add token expiration time +60 means token expire in 60 seconds
 
-$encryption->allow = array( 'domain1.com', 'domain2.com', 'etc...'); // optional allow only the following domains
-
-$encryption->deny = array( 'domain.com', 'MISSING' ); // optional deny following domain, blank or missing referrer
+<code> $encryption->expire = strtotime(date('d-m-Y H:i:s')) + 60;  // optional add token expiration time +60 means token expire in 60 seconds</code>
 
 
-$token = $encryption->token(); // Generate a token
+<code> $encryption->allow = array( 'domain1.com', 'domain2.com', 'etc...'); // optional allow only the following domains</code>
 
 
-echo $token; // show it
-</code>
+<code> $encryption->deny = array( 'domain.com', 'MISSING' ); // optional deny following domain, blank or missing referrer</code>
+
+
+<code> $token = $encryption->token(); // Generate a token</code>
+
+
+
+<code> echo $token; // show it</code>
+
+
 
 
 
